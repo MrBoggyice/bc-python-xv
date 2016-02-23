@@ -1,3 +1,7 @@
+import unittest
+
+from note_taking_app import NotesApplication
+
 '''
 
     This TDD simply tests my NotesApplication object and making sure 
@@ -11,11 +15,6 @@
     ~Happy coding
 
 '''
-
-import unittest
-
-from note_taking_app import NotesApplication
-
 
 class NotesApplicationTestSuite(unittest.TestCase):
 
@@ -35,7 +34,7 @@ class NotesApplicationTestSuite(unittest.TestCase):
         res = NotesApplication('fortune')
         self.assertEqual(res.note_name, [])
 
-    def test_meth_create_note1(self): # currently not passing at the moment still working on the test
+    def test_meth_create_note(self): 
         res = NotesApplication('fortune')
         res.create('fortune is my name but you can call me iyke')
         self.assertEqual(res.note_name,['fortune is my name but you can call me iyke'])
